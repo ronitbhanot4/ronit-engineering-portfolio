@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 220 25% 8%;
+    --foreground: 210 40% 98%;
+
+    --card: 220 20% 12%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 220 25% 10%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 217 91% 60%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 0 84% 60%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 220 20% 18%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 280 100% 70%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 20% 20%;
+    --input: 220 20% 18%;
+    --ring: 217 91% 60%;
+
+    --radius: 0.75rem;
+
+    --neon-blue: 217 91% 60%;
+    --neon-red: 0 84% 60%;
+    --neon-cyan: 180 100% 50%;
+    --neon-pink: 330 100% 70%;
+    
+    --gradient-primary: linear-gradient(135deg, hsl(217 91% 60%), hsl(280 100% 70%));
+    --gradient-secondary: linear-gradient(135deg, hsl(0 84% 60%), hsl(330 100% 70%));
+    --glow-blue: 0 0 20px hsl(217 91% 60% / 0.5);
+    --glow-red: 0 0 20px hsl(0 84% 60% / 0.5);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .text-gradient-blue {
+    @apply bg-gradient-to-r from-primary to-neon-cyan bg-clip-text text-transparent;
+  }
+  
+  .text-gradient-red {
+    @apply bg-gradient-to-r from-secondary to-neon-pink bg-clip-text text-transparent;
+  }
+
+  .glow-blue {
+    text-shadow: 0 0 20px hsl(var(--neon-blue) / 0.5);
+  }
+
+  .glow-red {
+    text-shadow: 0 0 20px hsl(var(--neon-red) / 0.5);
+  }
+
+  .grid-pattern {
+    background-image: 
+      linear-gradient(hsl(var(--primary) / 0.1) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(var(--primary) / 0.1) 1px, transparent 1px);
+    background-size: 50px 50px;
+  }
+
+  .animate-gradient {
+    animation: gradient 8s ease infinite;
+  }
+
+  @keyframes gradient {
+    0%, 100% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+  }
+}
