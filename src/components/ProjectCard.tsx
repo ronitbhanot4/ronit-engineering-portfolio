@@ -7,11 +7,12 @@ interface ProjectCardProps {
   description: string;
   technologies: string[];
   image?: string;
+  imageCover?: boolean;
   images?: string[];
   link?: string;
 }
 
-export const ProjectCard = ({ title, description, technologies, image, images, link }: ProjectCardProps) => {
+export const ProjectCard = ({ title, description, technologies, image, imageCover, images, link }: ProjectCardProps) => {
   const cardContent = (
     <Card className="group overflow-hidden bg-card/50 backdrop-blur-sm border-border/50 hover:border-primary/50 transition-all duration-300 hover:shadow-[0_0_30px_rgba(59,130,246,0.3)] hover:-translate-y-2 h-full">
       <div className="relative h-48 overflow-hidden bg-muted flex items-center justify-center">
@@ -22,7 +23,13 @@ export const ProjectCard = ({ title, description, technologies, image, images, l
             ))}
           </div>
         ) : image ? (
-          <img src={image} alt={title} className="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-300" />
+          <img
+  src={image}
+  alt={title}
+  className={`w-full h-full ${
+    imageCover ? "object-cover" : "object-contain p-2"
+  } group-hover:scale-105 transition-transform duration-300`}
+/>
         ) : (
           <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-primary/20 to-secondary/20">
             <div className="text-6xl font-display text-muted-foreground/30">{title[0]}</div>

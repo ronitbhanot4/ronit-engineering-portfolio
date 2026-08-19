@@ -303,7 +303,9 @@ const Index = () => {
           <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8">
             <ProjectCard title="Q-Arm Warehouse Project" description="A fully functional robotic arm system combining custom hardware design and Python software to accurately pick up and relocate objects in an automated warehouse simulation. Demonstrated seamless integration of mechanical engineering and programming." technologies={["Python", "Robotics", "Hardware Integration", "Engineering Design"]} images={[qarmBlueprint, qarmAction]} link="https://www.notion.so/Q-Arm-Robotic-Manipulator-Project-2dd3fc50fbaf80a0af59cba8c88862db" />
             
-            <ProjectCard title="GradeGenius" description="A web-based GPA calculator built using HTML, CSS, and JavaScript, featuring dynamic course inputs, weighted grade calculations, and a clean interactive interface." technologies={["HTML", "CSS", "JavaScript", "Web Development"]} image={gradegeniusScreenshot} link="/gradegenius-demo.mov" />
+            <ProjectCard title="GradeGenius" description="A web-based GPA calculator built using HTML, CSS, and JavaScript, featuring dynamic course inputs, weighted grade calculations, and a clean interactive interface." technologies={["HTML", "CSS", "JavaScript", "Web Development"]} image={gradegeniusScreenshot} 
+            imageCover
+            link="https://gradegenius-gpa-calculator.vercel.app/" />
             
             <ProjectCard
   title="Personal Engineering Portfolio"
