@@ -10,6 +10,7 @@ import graduationPhoto from "@/assets/graduation-photo.png";
 import qarmBlueprint from "@/assets/qarm-blueprint.png";
 import qarmAction from "@/assets/qarm-action.png";
 import gradegeniusScreenshot from "@/assets/gradegenius-screenshot.png";
+import internbaseScreenshot from "@/assets/internbase-screenshot.png";
 import { Download, Mail, Phone, Linkedin, Github, Code2, Cpu, Database, FileCode, Users, Lightbulb, Target, MessageSquare, ChevronDown, Rocket, Sparkles, Terminal, Zap, Clock, Presentation } from "lucide-react";
 const Index = () => {
   return <div className="min-h-screen bg-background text-foreground">
@@ -262,7 +263,7 @@ const Index = () => {
                 <SkillBar skill="AutoCAD" icon={<Code2 className="h-4 w-4" />} />
                 <SkillBar skill="TypeScript" icon={<Database className="h-4 w-4" />} />
                 <SkillBar skill="React" icon={<Code2 className="h-4 w-4" />} />
-                <SkillBar skill="RF Engineering" icon={<Lightbulb className="h-4 w-4" />} />
+                <SkillBar skill="Systems/RF Engineering" icon={<Lightbulb className="h-4 w-4" />} />
                 <SkillBar skill="Git/GitHub" icon={<Database className="h-4 w-4" />} />
               </CardContent>
             </Card>
@@ -306,6 +307,17 @@ const Index = () => {
             <ProjectCard title="GradeGenius" description="A web-based GPA calculator built using HTML, CSS, and JavaScript, featuring dynamic course inputs, weighted grade calculations, and a clean interactive interface." technologies={["HTML", "CSS", "JavaScript", "Web Development"]} image={gradegeniusScreenshot} 
             imageCover
             link="https://gradegenius-gpa-calculator.vercel.app/" />
+
+
+
+            <ProjectCard
+  title="InternBase"
+  description="A responsive internship application tracker built to organize applications, interviews, documents, and recruiting progress in one centralized workspace."
+  technologies={["React", "TypeScript", "Tailwind CSS", "Vite"]}
+  image={internbaseScreenshot}
+  imageCover
+  link="https://internbase-tau.vercel.app/"
+/>
             
             <ProjectCard
   title="Personal Engineering Portfolio"
